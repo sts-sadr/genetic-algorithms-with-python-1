@@ -5,8 +5,8 @@ import datetime
 class Chormosome:
     def __init__(self, genes, fitness):
         self.Genes = genes
+        self.Genes_list = list(genes)
         self.Fitness = fitness
-
 
 class GA1:
     def __init__(self, target, geneSet):
