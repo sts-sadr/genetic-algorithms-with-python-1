@@ -8,7 +8,7 @@ class Chormosome:
         self.Genes_list = list(genes)
         self.Fitness = fitness
 
-class GA1:
+class GA2:
     def __init__(self, target, geneSet):
         self.target = target
         self.geneSet = geneSet
@@ -48,7 +48,8 @@ class GA1:
     def display(self, parent):
         fitness = parent.Fitness
         timeDiff = datetime.datetime.now() - self.startTime
-        print(F'{parent.Genes}\t{round(fitness, 3)}\t{str(timeDiff.total_seconds())} segundos')
+        genes = parent.Genes
+        print(F'{genes}\t{round(fitness, 3)}\t{str(timeDiff.total_seconds())} segundos')
 
     def get_best(self, verbose = True):
         self.startTime = datetime.datetime.now()
